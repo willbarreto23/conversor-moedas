@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  outline: none;
+}
+
+body {
+  background-color: #5e17eb;
+  min-height: 100vh;
+}
+
+.logo-Gif {
+  width: 300px;
+  display: block;
+  margin: 20px auto;
+
+  mix-blend-mode: screen;
+  opacity: 0.9;
+}
+main {
+  position: relative;
+  width: 375px;
+  background: #f4f4f4;
+  border-radius: 20px;
+  margin: 0 auto 40px;
+  padding: 44px 24px 23px;
+
+  border: 4px solid transparent;
+
+background-image:
+  linear-gradient(#f4f4f4, #f4f4f4),
+  linear-gradient(
+    90deg,
+    #00ff88,
+    #ffffff,
+    #00cc6a,
+    #ffffff,
+    #00ff88
+  );
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-size: 100% 100%, 300% 300%;
+
+  animation: brilho 6s linear infinite;
+}
+
+@keyframes brilho {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+label {
+  color: #777777;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+select {
+  background: #ffffff;
+  border: 1px solid #bbbbbb;
+  border-radius: 4px;
+  height: 48px;
+  width: 100%;
+  margin-bottom: 24px;
+  appearance: none;
+  padding-left: 18px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #555555;
+  cursor: pointer;
+}
+
+.input-currency {
+  background: #ffffff;
+  border: 1px solid #bbbbbb;
+  border-radius: 4px;
+  height: 48px;
+  width: 100%;
+  margin-bottom: 24px;
+  appearance: none;
+  padding-left: 18px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #555555;
+  cursor: pointer;
+}
+
+.valor {
+  font-weight: 700;
+  font-size: 14px;
+  color: #777777;
+}
+
+.convert-button {
+  background: #772fd3;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 48px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.convert-button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.convert-button:active {
+  opacity: 0.6;
+}
+
+section {
+  border: 1px solid #772fd3;
+  border-radius: 20px;
+  margin-top: 36px;
+  padding: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seta-conversão {
+  margin: 15px 0;
+}
+
+.moeda-conversão {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.moeda-nome {
+  font-weight: 400;
+  font-size: 14px;
+  color: #777777;
+}
+
+.moeda-logo {
+  font-weight: 700;
+  font-size: 20px;
+  color: #555555;
+}
+
+/* ================================= */
+/* RESPONSIVIDADE */
+/* ================================= */
+
+/* Celulares menores */
+@media screen and (max-width: 430px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .logo-Gif {
+    width: 220px;
+  }
+
+  main {
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto 30px;
+  }
+
+  .moeda-logo {
+    font-size: 18px;
+  }
+
+  .moeda-nome {
+    font-size: 13px;
+  }
+
+  select,
+  .input-currency {
+    font-size: 14px;
+  }
+
+  .convert-button {
+    font-size: 16px;
+  }
+
+  .currency-American,
+  .currency-origin-image,
+  .moeda-conversão img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+
+  .seta-conversão {
+    width: 35px;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) {
+
+  .logo-Gif {
+    width: 320px;
+  }
+
+}
+
+/* Notebook */
+@media screen and (min-width: 1024px) {
+
+  .logo-Gif {
+    width: 350px;
+  }
+
+}
+
+/* Monitores grandes */
+@media screen and (min-width: 1440px) {
+
+  .logo-Gif {
+    width: 400px;
+  }
+
+}
